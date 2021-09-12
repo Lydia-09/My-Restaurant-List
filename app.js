@@ -32,10 +32,10 @@ app.get('/search', (req, res) => {
     ( item.name.toLowerCase().includes(keyword) || item.name_en.toLowerCase().includes(keyword) || item.category.toLowerCase().includes(keyword))
   )
 
-  if ( keyword.trim() !== "" ) {
+  if ( keyword.trim() !== '' ) {
     res.render('index', { restaurants, keyword})
   } else {
-    const emptyText = "Invalid Value"
+    const emptyText = 'Invalid Value'
     console.log(`輸入值為空白鍵: ${emptyText}`)
     res.render('index', {emptyText})
   }
